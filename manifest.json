@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Controls for reels",
+    "description": "gives controls for reels",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "js": ["main.js"],
+            "matches": ["https://www.youtube.com/*"],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_title": "YouTube reels controls",
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "icons": {
+        "32": "icons/icon_32.png",
+        "64": "icons/icon_64.png",
+        "128": "icons/icon_128.png"
+    }
+}
